@@ -7,7 +7,7 @@ player_1 = {
 def play_the_game():
     
     place_to_live()
-    # person_to_marry()
+    person_to_marry()
     # career()
 
 def place_to_live():
@@ -21,6 +21,22 @@ def place_to_live():
             places_to_live.append(places_input)
         else:
             print("You have already submitted this place. ")
+    # add random third option
+    # print("The computer has randomly selected " + third_option + " as your third place to live.")
+
+def person_to_marry():
+    person_to_marry = []
+    player_1['marry'] = person_to_marry
+
+    
+    while len(person_to_marry) < 2:
+        marry_input = input("Please type the name of one person you would like to marry: ")
+        if marry_input not in person_to_marry:
+            person_to_marry.append(marry_input)
+        else:
+            print("You have already submitted this person. ")
+        # add random third option
+        # print("The computer has randomly selected " + third_option + " as your third place to live.")
     print(player_1)
 
 play_the_game()
